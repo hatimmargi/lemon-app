@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Poppins,sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2em 3em;
 }
+header img {
+  width: 250px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 2em;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+header li {
+  list-style: none;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2em 3em;
+
+}
+main .hero-img img {
+  width: 500px;
+}
+main .hero-content {
   display: flex;
   flex-direction: column;
+  justify-content: left;
+  gap: 1em;
+}
+main .hero-content p {
+  max-width: 350px;
+}
+main .hero-content button {
+  border: none;
+  font-family: inherit;
+  background-color: #F4CE14;
+  border-radius: .3em;
+  padding: 1em 2em;
+  cursor: pointer;
+  max-width: 200px;
+}
+.specials {
+  margin: 2em 3em;
+}
+.specials .specials-content {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 2em;
+}
+.specials .specials-content button {
+  border: none;
+  font-family: inherit;
+  background-color: #F4CE14;
+  border-radius: .3em;
+
+  padding: 1em 2em;
+  cursor: pointer;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 4em;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 1em;
+  width: 350px;
+}
+.card .card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card img{
+  width: 100%;
+}
+.card button {
+  border: none;
+  font-family: inherit;
+  background-color: #1F3328;
   color: white;
+  border-radius: .3em;
+  padding: 1em 2em;
+  cursor: pointer;
+}
+.testimonials h1 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.testimonials .testimonial {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3em;
+  margin: auto;
+  max-width: 600px;
+}
+.testimonials .testimonial img {
+  width: 150px;
+  border-radius: 50%;
+}
+.testimonials .testimonial .testimonial-content  {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 1em;
+ font-size: .7em;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2em 3em;
 }

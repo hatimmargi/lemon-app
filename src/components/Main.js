@@ -2,7 +2,7 @@ import heroImg from '../imgs/hero-img.png'
 
 function Main () {
     return (
-        <>
+        <main>
 <div className="hero-content">
 <h1>Little Lemon</h1>
 <h4>Chicago</h4>
@@ -12,7 +12,7 @@ function Main () {
         <div className="hero-img">
         <img src={heroImg} alt="little lemon restaturant"/>
         </div>
-        </>
+        </main>
 )
 }
 export default Main

@@ -2,7 +2,7 @@ import aboutImg from '../imgs/Chefs.png'
 
 function About () {
     return (
-        <>
+        <section className='about-section'>
 <div className="about-content">
 <h1>Little Lemon</h1>
 <h4>Chicago</h4>
@@ -11,7 +11,7 @@ function About () {
         <div className="about-img">
         <img src={aboutImg} alt="chefs"/>
         </div>
-        </>
+        </section>
 )
 }
 export default About

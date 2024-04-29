@@ -8,11 +8,15 @@
 body {
   font-family: Poppins,sans-serif;
 }
+p, a {
+  font-size: .8em;
+}
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 2em 3em;
+  flex-wrap: wrap;
 }
 header img {
   width: 250px;
@@ -21,7 +25,8 @@ header nav {
   display: flex;
   align-items: center;
   gap: 2em;
-
+  font-size: .8em;
+  flex-wrap: wrap;
 }
 header li {
   list-style: none;
@@ -37,6 +42,7 @@ main {
   align-items: center;
   justify-content: space-between;
   margin: 2em 3em;
+  grid-auto-flow: column;
 
 }
 main .hero-img img {
@@ -84,6 +90,8 @@ main .hero-content button {
   align-items: center;
   gap: 2em;
   margin-bottom: 4em;
+  flex-wrap: wrap;
+
 }
 .card {
   display: flex;
@@ -182,4 +190,59 @@ footer .footer-section .icons {
 }
 footer .footer-section .icons img {
   width: 70%;
+}
+@media only screen and (max-width: 810px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body {
+    text-align: center;
+    margin: auto;
+  }
+  .about-section, main {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 2em;
+  }
+  main, .testimonials, .about-section {
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  main .hero-content {
+    justify-content: center;
+    align-items: center;
+  }
+  main .hero-img img, .about-section img {
+    width: 80vw;
+  }
+  .testimonials, .testimonials .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .testimonial .testimonial-content {
+    max-width: 80vw;
+  }
+  footer, footer .footer-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: left;
+    align-items: center;
+  }
+  .links, .links li{
+text-align: center;
+justify-content: center;
+  }
+
+
 }

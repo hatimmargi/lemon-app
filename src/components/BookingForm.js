@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 function BookingForm(props) {
   const myStyle = {
@@ -15,23 +14,31 @@ function BookingForm(props) {
     return <option>{item}</option>;
   });
 
-
-  function handleSubmit (e) {
-
-    e.preventDefault()
-    props.updateTimes()
-    navigate('/confirmed');
-
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.updateTimes();
+    navigate("/confirmed");
   }
 
   return (
     <>
       <form onSubmit={handleSubmit} style={myStyle}>
         <label for="res-date">Choose date</label>
-        <input type="date" id="res-date" value={props.date} onChange={props.dateChange} />
+        <input
+          type="date"
+          id="res-date"
+          value={props.date}
+          onChange={props.dateChange}
+          required={true}
+        />
         <h1>the date is {props.date}</h1>
         <label htmlFor="res-time">Choose time</label>
-        <select id="res-time" value={props.time} onChange={props.timeChange}>
+        <select
+          id="res-time"
+          value={props.time}
+          onChange={props.timeChange}
+          required={true}
+        >
           {timeOptions}
         </select>
         <h1>the time is {props.time}</h1>
@@ -45,17 +52,25 @@ function BookingForm(props) {
           id="guests"
           value={props.numberOfGuests}
           onChange={props.numberOfGuestsChange}
+          required={true}
         />
         <h1>the time is {props.numberOfGuests}</h1>
         <label htmlFor="occasion">Occasion</label>
-        <select id="occasion" value={props.occasion} onChange={props.occasionChange}>
+        <select
+          id="occasion"
+          value={props.occasion}
+          onChange={props.occasionChange}
+          required={true}
+
+        >
           <option>Birthday</option>
           <option>Anniversary</option>
           <option>Engagement</option>
           <option>Wedding</option>
         </select>
         <h1>the time is {props.occasion}</h1>
-        <input type="submit" value="Make Your reservation" />
+        <input type="submit" value="Make Your reservation"
+        disabled={props.time && props.numberOfGuests && props.occasion && props.date ? false : true} />
       </form>
     </>
   );

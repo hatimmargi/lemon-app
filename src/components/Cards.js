@@ -1,7 +1,7 @@
 import Card from "./Card";
 function Cards() {
   return (
-    <section className="specials">
+    <section id="specials" className="specials">
       <div className="specials-content">
         <h1>Specials</h1>
         <button>Order Online</button>

@@ -4,9 +4,6 @@ import Footer from "./Footer";
 import BookingForm from "./BookingForm";
 import { useState, useReducer, useEffect } from "react";
 
-
-
-
 function BookingPage() {
   // const [availableTimes, setAvailableTimes] = useState([
   //     "17:00",
@@ -48,24 +45,21 @@ function BookingPage() {
     "00:00",
     "01:00",
   ]);
-  const availableSlots = availableTimes.map((item)=> {
-    return <div>{item}</div>
-  })
+  const availableSlots = availableTimes.map((item) => {
+    return <div>{item}</div>;
+  });
   function updateTimes() {
-    dispatch()
+    dispatch();
   }
 
-
-
-
-// module.exports = updateTimes
-
+  // module.exports = updateTimes
 
   return (
     <>
       <Header>
         <Nav />
       </Header>
+      <h1 style={{ margin: "auto", textAlign: "center" }}>Reserve a table:</h1>
       <BookingForm
         availableTimes={availableTimes}
         date={date}
@@ -78,7 +72,6 @@ function BookingPage() {
         occasionChange={occasionChange}
         updateTimes={updateTimes}
       />
-      <h1>{availableSlots}</h1>
       <Footer />
     </>
   );

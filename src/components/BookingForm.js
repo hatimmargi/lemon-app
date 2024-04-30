@@ -23,27 +23,27 @@ function BookingForm(props) {
   return (
     <>
       <form onSubmit={handleSubmit} style={myStyle}>
-        <label for="res-date">Choose date</label>
+        <label for="res-date">Date:</label>
         <input
           type="date"
           id="res-date"
           value={props.date}
           onChange={props.dateChange}
           required={true}
+          aria-label="your reserve time"
         />
-        <h1>the date is {props.date}</h1>
-        <label htmlFor="res-time">Choose time</label>
+        <label htmlFor="res-time">Time:</label>
         <select
           id="res-time"
           value={props.time}
           onChange={props.timeChange}
           required={true}
+          aria-label="your reserve time"
         >
           {timeOptions}
         </select>
-        <h1>the time is {props.time}</h1>
 
-        <label htmlFor="guests">Number of guests</label>
+        <label htmlFor="guests">Number of guests:</label>
         <input
           type="number"
           placeholder="1"
@@ -53,24 +53,32 @@ function BookingForm(props) {
           value={props.numberOfGuests}
           onChange={props.numberOfGuestsChange}
           required={true}
+          aria-label="Number of guests"
         />
-        <h1>the time is {props.numberOfGuests}</h1>
-        <label htmlFor="occasion">Occasion</label>
+        <label htmlFor="occasion">Occasion:</label>
         <select
           id="occasion"
           value={props.occasion}
           onChange={props.occasionChange}
           required={true}
-
+          aria-label="Occasion"
         >
           <option>Birthday</option>
           <option>Anniversary</option>
           <option>Engagement</option>
           <option>Wedding</option>
         </select>
-        <h1>the time is {props.occasion}</h1>
-        <input type="submit" value="Make Your reservation"
-        disabled={props.time && props.numberOfGuests && props.occasion && props.date ? false : true} />
+        <input
+          type="submit"
+          value="Make Your reservation"
+          disabled={
+            props.time && props.numberOfGuests && props.occasion && props.date
+              ? false
+              : true
+          }
+          aria-label="On Click"
+
+        />
       </form>
     </>
   );

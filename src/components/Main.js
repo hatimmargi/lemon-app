@@ -12,7 +12,7 @@ function Main () {
 <div className="hero-content">
 <h1>Little Lemon</h1>
 <h4>Chicago</h4>
-<p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+<p>Experience Zesty Delights and Culinary Excellence at Little Lemon Restaurant</p>
 <button onClick={()=> navigate('/booking')}>Reserve a table</button>
 </div>
         <div className="hero-img">

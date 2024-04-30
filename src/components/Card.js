@@ -1,15 +1,16 @@
-import  greekSalad from '../imgs/Greek salad.png'
-function Card() {
-    return (
-        <div className='card'>
-        <img src={greekSalad} alt='greek salad'/>
-        <div className='card-title'>
-        <h3>Greek Salad</h3>
-        <sppan>$12,99</sppan>
-        </div>
-        <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-        <button>Order and delivery</button>
-        </div>
-)
+function Card(props) {
+  return (
+    <div className="card">
+      <img src={props.src} alt="greek salad" />
+      <div className="card-title">
+        <h3>{props.title}</h3>
+        <span>$12,99</span>
+      </div>
+      <p>
+        {props.description}
+      </p>
+      <button>Order and delivery</button>
+    </div>
+  );
 }
-export default Card
+export default Card;

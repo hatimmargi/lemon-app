@@ -43,10 +43,11 @@ main {
   justify-content: space-between;
   margin: 2em 3em;
   grid-auto-flow: column;
-
+  width: 90vw;
 }
 main .hero-img img {
-  width: 500px;
+  width: 600px;
+
 }
 main .hero-content {
   display: flex;
@@ -142,7 +143,7 @@ main .hero-content button {
 }
 
 .about-section {
-  width: 100%;
+  width: 90vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -153,7 +154,8 @@ main .hero-content button {
   max-width: 350px;
 }
 .about-section img {
-  max-width: 500px;
+  max-width: 600px;
+
 }
 
 footer {
